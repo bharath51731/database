@@ -59,6 +59,12 @@ SELECT  grade_symbol, COUNT(*) FROM (
 			WHEN grade >= 50 AND grade < 70 THEN 'B'
 			ELSE 'C'
 		END as grade_symbol FROM customer) 
-AS t1 GROUP BY grade_symbol;
+AS t1 GROUP BY grade_symbol; 
+
+-- max salary
+SELECT MAX(salary) FROM table_name WHERE SALARY <> (SELECT MAX(SALARY) FROM table_name);
+
+-- nth max salary
+SELECT salary FROM table_name ORDER BY salary DESC LIMIT 1 OFFSET n-1;
 
 

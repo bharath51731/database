@@ -47,4 +47,4 @@ ON salesman
 FOR EACH ROW EXECUTE PROCEDURE increase_commission(1.5);
 
 DROP FUNCTION increase_commission CASCADE;
-DROP TRIGGER increase_commission on salesman;
+DROP TRIGGER trigger_name ON table_name;

@@ -51,4 +51,6 @@ INSERT INTO customer(customer_id, name, city, grade, salesman_id) VALUES
 (3004, 'fabian johnson', 'paris', 67, 5003),
 (3003, 'jozy altidor', 'moscow', 60, 5007),
 (3001, 'gran guzan', 'london', 15, NULL);
+INSERT INTO country(country_code, holiday_year) VALUES('${countryCode}','${year}') ON CONFLICT ON CONSTRAINT uq_year_code_together DO NOTHING RETURNING id
+
 
